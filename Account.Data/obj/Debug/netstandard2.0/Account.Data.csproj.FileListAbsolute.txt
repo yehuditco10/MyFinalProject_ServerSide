@@ -35,3 +35,15 @@ C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Data\obj\Debug\net
 C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.csproj.CopyComplete
 C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.dll
 C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.pdb
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Data.dll.config
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Data.deps.json
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Data.dll
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Data.pdb
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Services.dll
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\bin\Debug\netstandard2.0\Account.Services.pdb
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.csprojAssemblyReference.cache
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.AssemblyInfoInputs.cache
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.AssemblyInfo.cs
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.csproj.CopyComplete
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.dll
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Data\obj\Debug\netstandard2.0\Account.Data.pdb

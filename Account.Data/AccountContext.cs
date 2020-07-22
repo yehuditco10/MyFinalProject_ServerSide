@@ -8,6 +8,10 @@ namespace Account.Data
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Entities.Account> Accounts { get; set; }
+        public DbSet<EmailVerification> EmailVerificationS { get; set; }
+
+
+
 
         public AccountContext(DbContextOptions<AccountContext> options)
   : base(options)
@@ -24,6 +28,7 @@ namespace Account.Data
         {
             modelBuilder.Entity<Customer>().ToTable("Customer");
             modelBuilder.Entity<Entities.Account>().ToTable("Account");
+            //Customer
             modelBuilder.Entity<Customer>()
                                .Property(customer => customer.Id);
             modelBuilder.Entity<Customer>()
@@ -33,6 +38,13 @@ namespace Account.Data
             modelBuilder.Entity<Customer>()
                   .HasIndex(customer => customer.Email)
                   .IsUnique();
+            modelBuilder.Entity<Customer>()
+              .Property(customer => customer.PasswordHash);
+            modelBuilder.Entity<Customer>()
+              .Property(customer => customer.PasswordSalt);
+            modelBuilder.Entity<Customer>()
+              .Property(customer => customer.Active);
+            //Account
             modelBuilder.Entity<Entities.Account>()
                 .Property(account => account.Id)
            .IsRequired(); ;
@@ -45,6 +57,20 @@ namespace Account.Data
             modelBuilder.Entity<Entities.Account>()
            .Property(account => account.Balance)
            .HasDefaultValue(1000);
+            //EmailVerification
+            modelBuilder.Entity<EmailVerification>()
+                            .Property(emailVerification => emailVerification.Id);
+            modelBuilder.Entity<EmailVerification>()
+                  .HasIndex(emailVerification => emailVerification.Email)
+                  .IsUnique();
+            modelBuilder.Entity<EmailVerification>()
+           .Property(emailVerification => emailVerification.VerificationCode)
+       .IsRequired(); ;
+            modelBuilder.Entity<EmailVerification>()
+                  .Property(emailVerification => emailVerification.ExpirationTime)
+                  .HasDefaultValueSql("getdate()")
+                  .IsRequired();
+
         }
     }
 }

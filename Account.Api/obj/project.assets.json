@@ -2686,6 +2686,7 @@
           "Account.Services": "1.0.0",
           "AutoMapper": "10.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
+          "DataAnnotationsExtensions": "5.0.1.27",
           "Microsoft.EntityFrameworkCore": "3.1.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.6",
           "System.Configuration.ConfigurationManager": "4.7.0"
@@ -8751,19 +8752,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bhartman\\.nuget\\packages\\": {}
+    "C:\\Users\\user1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
       "projectName": "Account.Api",
-      "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
-      "packagesPath": "C:\\Users\\bhartman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\obj\\",
+      "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
+      "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bhartman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8776,11 +8777,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
-              "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj"
+            "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj"
             },
-            "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
-              "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
+            "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
             }
           }
         }
@@ -8839,7 +8840,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
