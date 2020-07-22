@@ -25,10 +25,10 @@ namespace Account.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<float>("Balance")
+                    b.Property<int>("Balance")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("real")
-                        .HasDefaultValue(1000f);
+                        .HasColumnType("int")
+                        .HasDefaultValue(1000);
 
                     b.Property<Guid>("CustomerId")
                         .HasColumnType("uniqueidentifier");
@@ -51,6 +51,9 @@ namespace Account.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(450)");
 
@@ -60,8 +63,10 @@ namespace Account.Data.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordSalt")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

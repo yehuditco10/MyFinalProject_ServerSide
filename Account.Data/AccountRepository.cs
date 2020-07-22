@@ -4,8 +4,6 @@ using Account.Services;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Account.Data
@@ -21,26 +19,26 @@ namespace Account.Data
             _accountContext = accountContext;
             _mapper = mapper;
         }
-
-        public async Task<int> CreateAccountAsync(Services.Models.Customer customerModel)
+        public async Task<bool> CreateAccountAsync(Services.Models.Customer customerModel)
         {
             try
             {
-                Entities.Customer newCustomer = _mapper.Map<Entities.Customer>(customerModel);
-                Guid custId = Guid.NewGuid();
-                newCustomer.Id = custId;
-                await _accountContext.Customers.AddAsync(newCustomer);
+                Customer newCustomer = _mapper.Map<Customer>(customerModel);
+                newCustomer.Id = Guid.NewGuid();
+                newCustomer.Active = false;
+                _accountContext.Customers.Add(newCustomer);
                 var account = new Entities.Account()
                 {
                     Id = Guid.NewGuid(),
-                    CustomerId = custId,
+                    CustomerId = newCustomer.Id,
                     Opendate = DateTime.Today,
-                    Balance = 1000
+                    Balance = 100000,
                 };
-                await _accountContext.Accounts.AddAsync(account);
-                return await _accountContext.SaveChangesAsync();
+                _accountContext.Accounts.Add(account);
+                 await _accountContext.SaveChangesAsync();
+                return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw new CreateAccountFailed($"Account creation for { customerModel.Email } failed");
             }
@@ -63,7 +61,7 @@ namespace Account.Data
                 Entities.Customer customer = await _accountContext.Customers
                   .FirstOrDefaultAsync(c => c.Email == email);
                 if (customer == null)
-                    throw new AccountNotFoundException("Your email is not valid");
+                    throw new AccountNotFoundException("Your email is not exist");
                 return _mapper.Map<Services.Models.Customer>(customer);
             }
             catch (Exception e)
@@ -71,7 +69,6 @@ namespace Account.Data
                 throw new AccountNotFoundException(e.Message);
             }
         }
-
         public async Task<Services.Models.Account> GetAccountAsync(Guid accountId)
         {
             try
@@ -90,7 +87,6 @@ namespace Account.Data
                 throw new AccountNotFoundException(e.Message);
             }
         }
-
         public async Task<Guid> GetAccountIdByCustomerIdAsync(Guid customerId)
         {
             try

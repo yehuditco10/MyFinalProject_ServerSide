@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Account.Api.DTO;
 using Account.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Account.Api.Controllers
@@ -24,9 +21,6 @@ namespace Account.Api.Controllers
             _accountService = accountService;
             _mapper = mapper;
         }
-
-
-        [HttpGet("info")]
         public async Task<IActionResult> GetInfoAsync(Guid accountId)
         {
             Services.Models.Account account = await _accountService.GetAccountAsync(accountId);

@@ -1,8 +1,5 @@
 ﻿using Account.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Configuration;
 
 namespace Account.Data
@@ -15,10 +12,6 @@ namespace Account.Data
         public AccountContext(DbContextOptions<AccountContext> options)
   : base(options)
         { }
-        public AccountContext()
-        {
-
-        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -40,12 +33,6 @@ namespace Account.Data
             modelBuilder.Entity<Customer>()
                   .HasIndex(customer => customer.Email)
                   .IsUnique();
-            modelBuilder.Entity<Customer>()
-                .Property(customer => customer.Password)
-           .IsRequired();
-
-            //VerificationEmail
-
             modelBuilder.Entity<Entities.Account>()
                 .Property(account => account.Id)
            .IsRequired(); ;
@@ -58,9 +45,6 @@ namespace Account.Data
             modelBuilder.Entity<Entities.Account>()
            .Property(account => account.Balance)
            .HasDefaultValue(1000);
-
-
-
         }
     }
 }

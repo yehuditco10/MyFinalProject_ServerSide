@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Api\\Account.Api.csproj": {}
+    "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Api\\Account.Api.csproj": {
+    "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
+        "projectUniqueName": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
         "projectName": "Account.Api",
-        "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
-        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Api\\obj\\",
+        "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\Account.Api.csproj",
+        "packagesPath": "C:\\Users\\bhartman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bhartman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
-                "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\Account.Data.csproj"
+              "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
+                "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj"
               },
-              "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
-                "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
+              "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
+                "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
               }
             }
           }
@@ -90,21 +90,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
+    "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\Account.Data.csproj",
+        "projectUniqueName": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj",
         "projectName": "Account.Data",
-        "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\Account.Data.csproj",
-        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Data\\obj\\",
+        "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\Account.Data.csproj",
+        "packagesPath": "C:\\Users\\bhartman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bhartman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,8 +117,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
-                "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
+              "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
+                "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj"
               }
             }
           }
@@ -175,21 +175,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
+    "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj",
+        "projectUniqueName": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj",
         "projectName": "Account.Services",
-        "projectPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\Account.Services.csproj",
-        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Documents\\Yehudit\\Brix\\FinalProject\\FinalProject_ServerSide\\Account.Services\\obj\\",
+        "projectPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\Account.Services.csproj",
+        "packagesPath": "C:\\Users\\bhartman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bhartman\\Documents\\MyFinalProject_ServerSide\\Account.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bhartman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,7 +234,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

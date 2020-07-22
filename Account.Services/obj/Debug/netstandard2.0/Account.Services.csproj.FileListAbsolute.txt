@@ -14,3 +14,11 @@ C:\Users\user1\Documents\Yehudit\Brix\FinalProject\FinalProject_ServerSide\Accou
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\FinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.deps.json
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\FinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.dll
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\FinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.pdb
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\obj\Debug\netstandard2.0\Account.Services.AssemblyInfoInputs.cache
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\obj\Debug\netstandard2.0\Account.Services.AssemblyInfo.cs
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\obj\Debug\netstandard2.0\Account.Services.csproj.CoreCompileInputs.cache
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.deps.json
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.dll
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\bin\Debug\netstandard2.0\Account.Services.pdb
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\obj\Debug\netstandard2.0\Account.Services.dll
+C:\Users\bhartman\Documents\MyFinalProject_ServerSide\Account.Services\obj\Debug\netstandard2.0\Account.Services.pdb

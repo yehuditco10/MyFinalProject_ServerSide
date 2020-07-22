@@ -9,8 +9,7 @@ namespace Account.Data.Entities
         public Guid Id { get; set; }
         public Guid CustomerId { get; set; }
         public DateTime Opendate { get; set; }
-        public float Balance { get; set; }
+        public int Balance { get; set; }
         public virtual Customer Customer { get; set; }
-
     }
 }

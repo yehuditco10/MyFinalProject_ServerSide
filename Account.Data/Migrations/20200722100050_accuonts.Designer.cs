@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Account.Data.Migrations
 {
     [DbContext(typeof(AccountContext))]
-    [Migration("20200719083504_initial")]
-    partial class initial
+    [Migration("20200722100050_accuonts")]
+    partial class accuonts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,10 +27,10 @@ namespace Account.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<float>("Balance")
+                    b.Property<int>("Balance")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("real")
-                        .HasDefaultValue(1000f);
+                        .HasColumnType("int")
+                        .HasDefaultValue(1000);
 
                     b.Property<Guid>("CustomerId")
                         .HasColumnType("uniqueidentifier");
@@ -53,6 +53,9 @@ namespace Account.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(450)");
 
@@ -62,8 +65,10 @@ namespace Account.Data.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordSalt")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
