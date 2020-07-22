@@ -24,8 +24,14 @@ namespace Account.Api.Controllers
             _accountService = accountService;
             _mapper = mapper;
         }
+        [HttpPost("{email}")]
+        public async Task<ActionResult> SendVerificationCodeAsync(string email)
+        {
+            await _accountService.SendVerificationCodeAsync(email);
+            return Ok();
+        }
         [HttpPost("verification")]
-        public async Task<ActionResult<bool>> EmailVerification(EmailVerification verification)
+        public async Task<ActionResult<bool>> EmailVerificationAsync(EmailVerification verification)
         {
             var verificationModel = _mapper.Map<Services.Models.EmailVerification>(verification);
             return await _accountService.VerifyEmail(verificationModel);

@@ -12,6 +12,7 @@ namespace Account.Services
         Task<Guid> LoginAsync(string email, string password);
         Task<Models.Account> GetAccountAsync(Guid accountId);
         Task<bool> VerifyEmail(EmailVerification verificationModel);
+        Task SendVerificationCodeAsync(string email);
         //?
         //string ToHash(string password);
     }

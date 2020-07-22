@@ -1,6 +1,7 @@
 ﻿using Account.Services.Exceptions;
 using Account.Services.Models;
 using System;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace Account.Services
@@ -34,6 +35,46 @@ namespace Account.Services
             if (isValid == false)
               throw new LoginFailedException("Your password is not valid");
             return await _accountRepository.GetAccountIdByCustomerIdAsync(customer.Id);
+        }
+
+        public async Task SendVerificationCodeAsync(string email)
+        {
+            string subject = "Verification Code - Brix ";
+            int code = GenerateRandomNo(1000, 9999);
+            string body = $"Hello {email} </br>  your verify number is {code} </br><a href='http://localhost:4200/verification'>our site</a>";
+            await SendEmail(email, subject, body);
+        }
+        private int GenerateRandomNo(int min,int max)
+        {
+            Random _rdm = new Random();
+            return _rdm.Next(min, max);
+        }
+        private async Task SendEmail(string emailTo, string subject, string body)
+        {
+            try
+            {
+                string fromMail = "brixbootcamp@gmail.com";
+                // string fromMail = ConfigurationManager.AppSettings["WeightWatcherEmailAddress"];
+                string fromPassword = "brix2020";
+                //string fromPassword = ConfigurationManager.AppSettings["WeightWatcherEmailAddress"];
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress(fromMail);
+                mail.To.Add(emailTo);
+                mail.Subject = subject;
+                mail.Body = body;
+                SmtpServer.Port = 25;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(fromMail, fromPassword);
+                SmtpServer.EnableSsl = true;
+                SmtpServer.Send(mail);
+
+            }
+
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public async Task<bool> VerifyEmail(EmailVerification verification)
