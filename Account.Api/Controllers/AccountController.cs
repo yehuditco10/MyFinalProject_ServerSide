@@ -21,6 +21,7 @@ namespace Account.Api.Controllers
             _accountService = accountService;
             _mapper = mapper;
         }
+        [HttpGet("info")]
         public async Task<IActionResult> GetInfoAsync(Guid accountId)
         {
             Services.Models.Account account = await _accountService.GetAccountAsync(accountId);

@@ -11,5 +11,6 @@ namespace Account.Services
         Task<Customer> GetCustomerAsync(string email);
         Task<Models.Account> GetAccountAsync(Guid accountId);
         Task<Guid> GetAccountIdByCustomerIdAsync(Guid customerId);
+        Task<bool> VerifyEmail(EmailVerification verification);
     }
 }

@@ -38,6 +38,9 @@ namespace Account.Api.Middleware
                 code = HttpStatusCode.InternalServerError;
             else if (ex is AccountNotFoundException)
                 code = HttpStatusCode.NotFound;
+            // whice status code?
+            else if (ex is EmailVerificationException)
+                code = HttpStatusCode.NotFound;
 
             context.Response.StatusCode = (int)code;
             return context.Response.WriteAsync(result);

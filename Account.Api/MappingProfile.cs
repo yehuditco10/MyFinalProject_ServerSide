@@ -15,7 +15,8 @@ namespace Account.Data
             CreateMap< Entities.Customer,Services.Models.Customer>();
             CreateMap<Services.Models.Customer,Entities.Customer>();
             CreateMap<Entities.Account, Services.Models.Account>();
-            CreateMap<Services.Models.Account, Entities.Account>();      
+            CreateMap<Services.Models.Account, Entities.Account>();
+            CreateMap<EmailVerification,Services.Models.EmailVerification>();
         }
     }
 }

@@ -36,6 +36,11 @@ namespace Account.Services
             return await _accountRepository.GetAccountIdByCustomerIdAsync(customer.Id);
         }
 
+        public async Task<bool> VerifyEmail(EmailVerification verification)
+        {
+            return await _accountRepository.VerifyEmail(verification);
+        }
+
         private bool VerifyHashedPassword( string customerPassword,string customerSaltPassword,string passwordFromUser)
         {
             if (Hashing.AreEqual(passwordFromUser, customerPassword, customerSaltPassword))

@@ -23,7 +23,7 @@ namespace Account.Data
         {
             try
             {
-                Customer newCustomer = _mapper.Map<Customer>(customerModel);
+                Entities.Customer newCustomer = _mapper.Map<Entities.Customer>(customerModel);
                 newCustomer.Id = Guid.NewGuid();
                 newCustomer.Active = false;
                 _accountContext.Customers.Add(newCustomer);
@@ -103,6 +103,28 @@ namespace Account.Data
             {
                 throw new AccountNotFoundException(e.Message);
             }
+        }
+
+        public async Task<bool> VerifyEmail(Services.Models.EmailVerification verification)
+        {
+            try
+            {
+                var emailVerification = await _accountContext.EmailVerificationS.FirstOrDefaultAsync(c => c.Email == verification.Email);
+                if (emailVerification == null)
+                {
+                    throw new EmailVerificationException("Email not found");
+                }
+                if (emailVerification.VerificationCode != verification.VerificationCode)
+                    throw new EmailVerificationException("The verification code is wrong");
+                if (emailVerification.ExpirationTime < DateTime.Now)
+                    throw new EmailVerificationException("The expiration date has expired");
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new EmailVerificationException(e.Message);
+            }
+           
         }
     }
 }
