@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Api", "Account.Api\Account.Api.csproj", "{445410BD-E253-466B-B827-4AC2D8B1B3E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Api", "Account.Api\Account.Api.csproj", "{445410BD-E253-466B-B827-4AC2D8B1B3E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Services", "Account.Services\Account.Services.csproj", "{D623447B-36AF-4E0F-8F20-CE0D6F559D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Services", "Account.Services\Account.Services.csproj", "{D623447B-36AF-4E0F-8F20-CE0D6F559D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Data", "Account.Data\Account.Data.csproj", "{399621C8-42F9-4283-A6DC-D864BA2EB32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Data", "Account.Data\Account.Data.csproj", "{399621C8-42F9-4283-A6DC-D864BA2EB32C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{6084FE9F-A72C-4BFB-A0DC-31834B08CD2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{445410BD-E253-466B-B827-4AC2D8B1B3E1} = {6084FE9F-A72C-4BFB-A0DC-31834B08CD2B}
+		{D623447B-36AF-4E0F-8F20-CE0D6F559D41} = {6084FE9F-A72C-4BFB-A0DC-31834B08CD2B}
+		{399621C8-42F9-4283-A6DC-D864BA2EB32C} = {6084FE9F-A72C-4BFB-A0DC-31834B08CD2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5726CC70-8DB2-4D2E-9A90-7A21DE7E6B1D}

@@ -26,6 +26,9 @@ namespace Account.Api
                    Configuration.GetConnectionString("AccountConnection")));
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IVerificationService, VerificationService>();
+            services.AddScoped<IVerificationRepository, VerificationRepository>();
+
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -72,7 +75,7 @@ namespace Account.Api
             {
                 setupAction.SwaggerEndpoint(
                     "/swagger/AccountOpenApiSpecification/swagger.json",
-                    "WeightWatchers");
+                    "FinalProject - Account");
                 setupAction.RoutePrefix = "";
             });
         }
