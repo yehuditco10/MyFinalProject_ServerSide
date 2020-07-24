@@ -8,5 +8,6 @@ namespace Account.Services.Models
     {
         public string Email { get; set; }
         public int VerificationCode { get; set; }
+        public DateTime ExpirationTime { get; set; }
     }
 }

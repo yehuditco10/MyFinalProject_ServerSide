@@ -573,3 +573,4 @@ C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Acc
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Api\obj\Debug\netcoreapp3.1\Account.Api.csproj.CopyComplete
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Api\obj\Debug\netcoreapp3.1\Account.Api.dll
 C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Api\obj\Debug\netcoreapp3.1\Account.Api.pdb
+C:\Users\user1\Documents\Yehudit\Brix\FinalProject\MyFinalProject_ServerSide\Account.Api\bin\Debug\netcoreapp3.1\Account.Services.dll.config

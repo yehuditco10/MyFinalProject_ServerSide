@@ -35,12 +35,27 @@ namespace Account.Data
                     Balance = 100000,
                 };
                 _accountContext.Accounts.Add(account);
-                 await _accountContext.SaveChangesAsync();
+                await _accountContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception e)
             {
                 throw new CreateAccountFailed($"Account creation for { customerModel.Email } failed");
+            }
+        }
+
+        public async Task<bool> CreateEmailVerificationAsync(Services.Models.EmailVerification emailVerificationModel)
+        {
+            try
+            {
+                Entities.EmailVerification emailVerification = _mapper.Map<Entities.EmailVerification>(emailVerificationModel);
+                await _accountContext.EmailVerificationS.AddAsync(emailVerification);
+                await _accountContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new EmailVerificationException(e.Message);
             }
         }
         public async Task<bool> IsEmailExistsAsync(string email)
@@ -118,13 +133,74 @@ namespace Account.Data
                     throw new EmailVerificationException("The verification code is wrong");
                 if (emailVerification.ExpirationTime < DateTime.Now)
                     throw new EmailVerificationException("The expiration date has expired");
+                var active = await ActivateAccount(verification.Email);
+                if (active == -1)
+                    throw new EmailVerificationException("Activate account failed");
                 return true;
             }
             catch (Exception e)
             {
                 throw new EmailVerificationException(e.Message);
             }
-           
+
+        }
+        private async Task<int> ActivateAccount(string email)
+        {
+            try
+            {
+                var account = await _accountContext.Customers.FirstOrDefaultAsync(a => a.Email == email);
+                if (account == null)
+                    throw new AccountNotFoundException($"There is no accountt for {email}");
+                account.Active = true;
+                return await _accountContext.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                //whice type?
+                throw new Exception(e.Message);
+            }
+        }
+
+
+
+        public async Task<Services.Models.EmailVerification> GetVerificationDetails(string email)
+        {
+            try
+            {
+                Entities.EmailVerification emailVerification = await _accountContext.EmailVerificationS.FirstOrDefaultAsync(
+                              e => e.Email == email);
+                if (emailVerification == null)
+                    throw new AccountNotFoundException("we didn't find this email");//which exception
+                return _mapper.Map<Services.Models.EmailVerification>(emailVerification);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+        }
+
+        public async Task<bool> UpdateVerificationCodeAsync(string email,int verificationCode)
+        {
+            try
+            {
+                EmailVerification emailVerification = await _accountContext.EmailVerificationS.FirstOrDefaultAsync(
+                               e => e.Email == email);
+                if(emailVerification==null)
+                    throw new AccountNotFoundException("we didn't find this email");//which exception
+                emailVerification.VerificationCode = verificationCode;
+                //take the minutes number fron config file
+                emailVerification.ExpirationTime = DateTime.Now.AddMinutes(60);
+                await _accountContext.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+            throw new NotImplementedException();
         }
     }
 }

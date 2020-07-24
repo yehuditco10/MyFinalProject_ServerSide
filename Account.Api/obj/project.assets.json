@@ -2702,7 +2702,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "3.1.6"
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "3.1.6",
+          "System.Configuration.ConfigurationManager": "4.7.0"
         },
         "compile": {
           "bin/placeholder/Account.Services.dll": {}
